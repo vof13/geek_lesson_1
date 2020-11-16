@@ -1,5 +1,7 @@
 package lesson1;
 
+import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
+
 public class MainClass {
     public static void main(String[] args) {
         byte b = 5;
@@ -16,8 +18,15 @@ public class MainClass {
         System.out.print("Задание 5: ");
         isPositive(5);
         System.out.println("Задание 6: " + isPositiveBool(5));
-        System.out.print("Задание 7:");
+        System.out.print("Задание 7: ");
         name("Володя");
+        System.out.print("Задание 8: ");
+        visokos(2000);
+        visokos(2100);
+        visokos(2104);
+        visokos(2101);
+
+
     }
 
     public static float math (float a, float b, float c, float d) {
@@ -43,6 +52,11 @@ public class MainClass {
         System.out.println("Привет, " + nam + "!");
     }
 
-
-
+    public static void visokos (int year){
+        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0 )) {
+            System.out.println(year + " год високосный");
+        } else {
+            System.out.println(year + " год не високсоный");
+        }
     }
+}
